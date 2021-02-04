@@ -6,6 +6,16 @@
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d412.9714930200327!2d-118.344246624629!3d34.10098228558076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf20e4c82873%3A0x14015754d926dadb!2zNzA2MCBIb2xseXdvb2QgQmx2ZCwgTG9zIEFuZ2VsZXMsIENBIDkwMDI4LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1612343005131!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <form method="post" action="/member/add">
     @csrf
 
@@ -23,7 +33,7 @@
 
     <div class="form-group">
         <label for="birthdate" class="form-label">Birthdate*</label>
-        <input type="date" name="date" class="form-control" id="birthdate" placeholder="Please enter your birthdate">
+        <input type="date" name="birthdate" class="form-control" id="birthdate" placeholder="Please enter your birthdate">
     </div>
 
     <div class="form-group">

@@ -6,24 +6,27 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateMembersTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
+
+
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->date('birthdate');
+            $table->integer('telephone');
+            $table->string('email');
+            $table->string('company');
+            $table->string('position');
+            $table->text('about me');
+            $table->text('photo');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+
+
     public function down()
     {
         Schema::dropIfExists('members');

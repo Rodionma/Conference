@@ -11,6 +11,8 @@ Route::get('/updateform', function () {
     return view('second');
 })->name('second');
 
-Route::post('member/add', '\App\Http\Controllers\MemberController@create')->name('add');
+Route::post('member/add',
+    '\App\Http\Controllers\MemberController@create'
+)->name('add');
 
 
