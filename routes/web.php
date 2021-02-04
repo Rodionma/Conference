@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('main');
 })->name('main');
 
-Route::get('/updateform', function () {
+Route::get('/updateform/{id}', function () {
     return view('second');
 })->name('second');
 

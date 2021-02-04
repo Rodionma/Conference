@@ -37,13 +37,18 @@
     </div>
 
     <div class="form-group">
+        <label for="report_subject" class="form-label">Report Subject*</label>
+        <input type="text" name="report_subject" class="form-control" id="report_subject" placeholder="Please enter the Report Subject">
+    </div>
+
+    <div class="form-group">
         <label for="telephone" class="form-label">Telephone number</label>
         <input type="tel" name="telephone" class="form-control" id="telephone" placeholder="Please enter your telephone number" pattern="+1 ([0-9]{3})-[0-9]{3}-[0-9]{4}">
     </div>
 
     <div class="form-group">
         <label for="e-mail" class="form-label">E-mail</label>
-        <input type="e-mail" name="e-mail" class="form-control" id="e-mail" placeholder="Введите e-mail">
+        <input type="e-mail" name="e-mail" class="form-control" id="e-mail" placeholder="Enter your e-mail">
     </div>
 
     <hr class="my-4">

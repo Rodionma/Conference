@@ -8,6 +8,8 @@
         <input type="text" name="company" class="form-control" id="company" placeholder="Please enter your company">
     </div>
 
+    <input type="hidden" id='id' value="{{$id}}}">
+
     <div class="form-group">
         <label for="position" class="form-label">Position</label>
         <input type="text" name="position" class="form-control" id="position" placeholder="Please enter your position">
