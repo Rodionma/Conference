@@ -2,13 +2,15 @@
 
 @section('content')
 
-<form method="post" action="/member/update">
+<form method="post" action="/member/update" enctype="multipart/form-data">
+    @csrf
+
 <div class="form-group">
         <label for="company" class="form-label">Company</label>
         <input type="text" name="company" class="form-control" id="company" placeholder="Please enter your company">
     </div>
 
-    <input type="hidden" id='id' value="{{$id}}}">
+    <input type="hidden" name="id" value="{{$id}}">
 
     <div class="form-group">
         <label for="position" class="form-label">Position</label>
