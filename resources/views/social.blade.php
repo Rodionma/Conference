@@ -7,12 +7,12 @@
     <div class="starter-template text-center py-5 px-3">
         <h1>Thank you for joining</h1></div>
 
-    <div class="starter-template text-center py-5 px-3"><a href="{{route('all')}}"><h1>All members</h1></a></div>
+    <div class="starter-template text-center py-5 px-3"><a href="{{route('all')}}"><h1>All members({{$amount}})</h1></a></div>
         <div class="container" style="display: flex">
 
 
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-       class="twitter-share-button" class="mt5" data-size="large"
+       class="twitter-share-button btn btn-social btn-twitter" class="mt5" data-size="large"
        data-text="Check out this Meetup with SoCal AngularJS! link:"
        data-lang="en" data-show-count="false">Tweet</a>
 

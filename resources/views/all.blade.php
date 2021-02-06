@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+    <h1 class="mt-5">All Members({{count($data)}})</h1>
     <table class="table">
         <tr>
             <th scope="col">Photo </th>

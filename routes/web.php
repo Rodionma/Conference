@@ -20,7 +20,7 @@ Route::post('member/update',
 )->name('update');
 
 Route::get('/social', function () {
-    return view('social');
+    return view('social')->with(['amount'=>\App\Models\Member::all()->count()]);
 })->name('social');
 
 Route::get('/all', '\App\Http\Controllers\MemberController@getall')->name('all');

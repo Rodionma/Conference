@@ -14,6 +14,7 @@ class MemberController extends Controller //creating new conference member
             'birthdate' => 'required|before:2003-01-01',
             'telephone' => 'required|numeric',
             'e-mail' => 'required|email',
+            'country' => 'required',
             'report_subject' =>'required|min:3'
         ]);
 
@@ -22,6 +23,7 @@ class MemberController extends Controller //creating new conference member
         $member->lastname=$req['lastname'];
         $member->birthdate=$req['birthdate'];
         $member->report_subject=$req['report_subject'];
+        $member->country=$req['country'];
         $member->telephone=$req['telephone'];
         $member->email=$req['e-mail'];
 
