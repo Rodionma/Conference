@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('main');
 })->name('main');
 
-Route::get('/updateform/{id}', function () {
+Route::get('/updateform/', function () {
     return view('second');
 })->name('second');
 
@@ -20,7 +20,7 @@ Route::post('member/update',
 )->name('update');
 
 Route::get('/social', function () {
-    return view('social')->with(['amount'=>\App\Models\Member::all()->count()]);
+    return view('social')->with(['amount'=>\App\Models\Member::all()->count(),'tw_text'=>Config::get('app.tw_text')]);
 })->name('social');
 
 Route::get('/all', '\App\Http\Controllers\MemberController@getall')->name('all');

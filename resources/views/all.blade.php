@@ -20,7 +20,7 @@
                     @endif
                 <td>{{$member['firstname']}} {{$member['lastname']}}</td>
                 <td>{{$member['report_subject']}}</td>
-                    <th scope="col"><a href="{{$member['email']}}">{{$member['email']}}</a></th>
+                    <th scope="col"><a href="mailto:{{$member['email']}}">{{$member['email']}}</a></th>
                 </tr>
 
 

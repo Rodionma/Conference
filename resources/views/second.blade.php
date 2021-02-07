@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-
-<form method="post" action="/member/update" enctype="multipart/form-data">
+    <div id="frmmain2">
+<form method="post" action="/member/update" enctype="multipart/form-data" id="frm2">
     @csrf
 
 <div class="form-group">
@@ -10,7 +10,7 @@
         <input type="text" name="company" class="form-control" id="company" placeholder="Please enter your company">
     </div>
 
-    <input type="hidden" name="id" value="{{$id}}">
+
 
     <div class="form-group">
         <label for="position" class="form-label">Position</label>
@@ -31,4 +31,15 @@
     <button class="btn btn-success" type="submit">Next</button>
 
 </form>
+    </div>
+
+    <script>
+
+        $('#frm2').submit(function()
+        { sessionStorage.removeItem("is_completed");
+        })
+
+
+
+    </script>
     @endsection

@@ -29,16 +29,16 @@ class MemberController extends Controller //creating new conference member
 
         $member->save();
 
-        $id=$member->id;
 
-        return view('second',['id'=>$id]);
+       return '/updateform/';
     }
 
 
 
     //----------------------------------------------------------------------------------------
     public function update(Request $req){//updating information from the second form
-         $member=Member::find($req['id']);
+
+        $member=Member::orderby('id','desc')->first();
 
         if(isset($req['company'])){
          $member->company=$req['company'];}
@@ -58,7 +58,7 @@ class MemberController extends Controller //creating new conference member
             $member->save();
 
 
-        return redirect('social');
+        return redirect(route('social'));
     }
 
         public function getall(){

@@ -13,7 +13,7 @@
 
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
        class="twitter-share-button btn btn-social btn-twitter" class="mt5" data-size="large"
-       data-text="Check out this Meetup with SoCal AngularJS! link:"
+       data-text="{{$tw_text}}"
        data-lang="en" data-show-count="false">Tweet</a>
 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
