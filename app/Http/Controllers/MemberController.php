@@ -16,7 +16,7 @@ class MemberController extends Controller //creating new conference member
             'e-mail' => 'required|email',
             'country' => 'required',
             'report_subject' =>'required|min:3'
-        ]);
+        ]);//validation
 
         $member = new Member();
         $member->firstname=$req['firstname'];
@@ -27,7 +27,7 @@ class MemberController extends Controller //creating new conference member
         $member->telephone=$req['telephone'];
         $member->email=$req['e-mail'];
 
-        $member->save();
+        $member->save();//saving data from request
 
 
        return '/updateform/';
@@ -47,13 +47,13 @@ class MemberController extends Controller //creating new conference member
             $member->position=$req['position'];}
 
         if(isset($req['description'])){
-            $member->about_me=$req['description'];}
+            $member->about_me=$req['description'];}//if data is set get it
 
         if($req->hasFile('photo')) {
             $file = $req->file('photo');
             $file->move(public_path() . '/media',$file->getClientOriginalName());
             $member->photo=$file->getClientOriginalName();
-        }
+        }//moving photo to directory
 
             $member->save();
 
@@ -61,7 +61,7 @@ class MemberController extends Controller //creating new conference member
         return redirect(route('social'));
     }
 
-        public function getall(){
+        public function getall(){ //getting all members
         $member=new Member();
         return view('all', ['data'=>$member->all()]);
         }
